@@ -6,11 +6,12 @@ import ctypes
 
 
 def main():
-    image_data = download_picture('https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg')
-    result = save_image_file(image_data, r'C:\temp\kitty.jpg')
+    image_data = download_image('https://www.google.com/search?q=karate+kids+pictures&source=lmns&bih=746&biw=1536&rlz=1C1WERZ_enIN1005IN1005&hl=en&sa=X&ved=2ahUKEwitqYmg8rz-AhU0JGIAHQ9gCfQQ_AUoAHoECAEQAA#imgrc=gbAEMmLqyHsuEM')
+
+    result = save_image_file(image_data, r'"C:\Users\rosea\OneDrive\Documents\Pictures\the-karate-kid-2010-jaden-smith-harald-zwart-dir-BN87M2.jpg"')
     return
 
-def download_picture(image_url):
+def download_image(image_url):
     """Downloads an image from a specified URL.
 
 DOES NOT SAVE THE IMAGE FILE TO DISK.
@@ -91,5 +92,5 @@ def scale_image(image_size, max_size=(800, 600)):
     new_size = (int(image_size[0] * resize_ratio), int(image_size[1] * resize_ratio))
     return new_size
 
-if _name_ == '_main_':
-    main()
+if __name__ == '_main_':
+    main()
